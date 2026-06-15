@@ -1,0 +1,97 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const partners = [
+  { name: 'Bilka', url: 'https://www.bilka.ro' },
+  { name: 'Lindab', url: 'https://www.lindab.com/ro' },
+  { name: 'Wetterbest', url: 'https://www.wetterbest.ro' },
+  { name: 'Velux', url: 'https://www.velux.ro' },
+];
+
+const logos = {
+  Bilka: (
+    <svg viewBox="0 0 120 40" className="h-10 w-auto" fill="white">
+      <text x="0" y="32" fontFamily="Arial Black, sans-serif" fontSize="34" fontWeight="900" letterSpacing="1">BILKA</text>
+      <text x="1" y="42" fontFamily="Arial, sans-serif" fontSize="9" letterSpacing="2" opacity="0.7">ROOF SYSTEM</text>
+    </svg>
+  ),
+  Lindab: (
+    <svg viewBox="0 0 180 44" className="h-10 w-auto" fill="white">
+      {/* Concentric circles - Lindab target logo */}
+      <circle cx="18" cy="22" r="14" fill="none" stroke="white" strokeWidth="2.5"/>
+      <circle cx="18" cy="22" r="10" fill="none" stroke="white" strokeWidth="2"/>
+      <circle cx="18" cy="22" r="6" fill="none" stroke="white" strokeWidth="2"/>
+      <circle cx="18" cy="22" r="2" fill="white"/>
+      {/* Text */}
+      <text x="50" y="30" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="700" letterSpacing="0.3" fill="white">Lindab</text>
+    </svg>
+  ),
+  Wetterbest: (
+    <svg viewBox="0 0 240 50" className="h-10 w-auto">
+      {/* Tile/roof shapes above text - green */}
+      <g>
+        {/* First tile */}
+        <path d="M35 8 L50 4 L55 14 L40 18 Z" fill="#2d8659" />
+        {/* Second tile */}
+        <path d="M50 6 L65 2 L70 12 L55 16 Z" fill="#22a74a" />
+        {/* Third tile - darker */}
+        <path d="M65 8 L80 4 L85 14 L70 18 Z" fill="#1a7d3f" />
+      </g>
+      {/* wetterbest text - bold sans-serif, white */}
+      <text x="30" y="42" fontFamily="Arial, sans-serif" fontSize="26" fontWeight="700" fill="white" letterSpacing="0.3">wetterbest</text>
+    </svg>
+  ),
+  Velux: (
+    <svg viewBox="0 0 110 40" className="h-10 w-auto">
+      <rect x="0" y="0" width="50" height="40" fill="#CC0000" rx="2"/>
+      <text x="5" y="28" fontFamily="Arial Black, sans-serif" fontSize="20" fontWeight="900" fill="white" letterSpacing="1">VEL</text>
+      <text x="55" y="28" fontFamily="Arial Black, sans-serif" fontSize="20" fontWeight="900" fill="white" letterSpacing="1">UX</text>
+    </svg>
+  ),
+};
+
+export default function PartnersSection() {
+  return (
+    <section className="py-16 lg:py-20 border-y border-border/50 bg-secondary/20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <div className="w-12 h-px bg-primary" />
+            <span className="text-primary text-sm font-semibold tracking-[0.25em] uppercase">Parteneri</span>
+            <div className="w-12 h-px bg-primary" />
+          </div>
+          <p className="text-muted-foreground text-base">
+            Lucrăm exclusiv cu branduri de top, recunoscute la nivel european
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 items-center">
+          {partners.map((partner, index) => (
+            <motion.div
+              key={partner.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+              <a
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full p-6 rounded-lg border border-border/40 bg-card/40 hover:border-primary/30 hover:bg-card transition-all duration-300 group opacity-60 hover:opacity-100"
+              >
+                {logos[partner.name]}
+              </a>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
