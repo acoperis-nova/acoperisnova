@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 const beforeAfterImages = [
   'https://media.base44.com/images/public/69de30306771a2ccbe5f46cb/b0e0d85c6_WhatsAppImage2026-04-17at182825.jpg',
   'https://media.base44.com/images/public/69de30306771a2ccbe5f46cb/8c8b1b615_WhatsAppImage2026-04-17at1828251.jpg',
+  'https://media.base44.com/images/public/69de30306771a2ccbe5f46cb/f834e4cc5_WhatsAppImage2026-06-16at191958.jpg',
 ];
 
 export default function BeforeAfterSection() {
