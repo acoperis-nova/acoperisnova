@@ -27,7 +27,7 @@ export default function FloatingCTA() {
         >
           <div className="bg-background/95 backdrop-blur-xl border-t border-border px-4 py-3 flex gap-3">
             <a
-              href="tel:+40786188957"
+              href="tel:+40773082734"
               className="flex-1 flex items-center justify-center gap-2 py-3 rounded-sm border border-border text-foreground font-medium text-sm hover:border-primary hover:text-primary transition-all"
             >
               <Phone className="w-4 h-4" />
