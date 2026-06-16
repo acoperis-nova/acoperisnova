@@ -47,6 +47,9 @@ export default function QuoteFormSection() {
     setLoading(false);
     setSubmitted(true);
     toast.success('Cererea a fost trimisă cu succes!');
+    // Trimite și pe WhatsApp
+    const msg = `Cerere Ofertă Acoperiș:\nNume: ${form.name}\nTelefon: ${form.phone}\nLocalitate: ${form.location}\nServiciu: ${form.service}\nMesaj: ${form.message}`;
+    window.open(`https://wa.me/40773082734?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
   if (submitted) {
