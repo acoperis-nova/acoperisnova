@@ -17,6 +17,8 @@ const galleryItems = [
   { url: 'https://media.base44.com/images/public/69de30306771a2ccbe5f46cb/71f8e0e46_WhatsAppImage2026-04-13at1949312.jpg', title: 'Mansardare Interior', tag: 'Izolație & Mansardare' },
   { url: 'https://media.base44.com/images/public/69de30306771a2ccbe5f46cb/aea640b0d_WhatsAppImage2026-04-13at1949311.jpg', title: 'Structură Șarpantă', tag: 'Izolație & Mansardare' },
   { url: 'https://media.base44.com/images/public/69de30306771a2ccbe5f46cb/a00e5abe9_WhatsAppImage2026-04-13at194929.jpg', title: 'Finalizare Lucrare', tag: 'Țiglă Metalică' },
+  { url: 'https://media.base44.com/images/public/69de30306771a2ccbe5f46cb/f5f47e476_WhatsAppImage2026-06-16at192138.jpg', title: 'Montaj Țiglă Metalică', tag: 'Montaj Profesional' },
+  { url: 'https://media.base44.com/images/public/69de30306771a2ccbe5f46cb/e7e919454_WhatsAppImage2026-06-16at1921381.jpg', title: 'Livrare Materiale', tag: 'Montaj Profesional' },
 ];
 
 // Duplicate for seamless loop
