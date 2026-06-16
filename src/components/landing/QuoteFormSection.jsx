@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { base44 } from '@/api/base44Client';
-import { Send, CheckCircle, Loader2 } from 'lucide-react';
-import { toast } from 'sonner';
+import { Send, CheckCircle } from 'lucide-react';
 
 const serviceOptions = [
   'Reparații Acoperișuri Orice Tip',
@@ -29,27 +27,21 @@ export default function QuoteFormSection() {
     service: '',
     message: '',
   });
-  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.name || !form.phone) {
-      toast.error('Vă rugăm completați numele și telefonul.');
+      alert('Vă rugăm completați numele și telefonul.');
       return;
     }
-    setLoading(true);
-    await base44.entities.QuoteRequest.create(form);
-    setLoading(false);
-    setSubmitted(true);
-    toast.success('Cererea a fost trimisă cu succes!');
-    // Trimite și pe WhatsApp
     const msg = `Cerere Ofertă Acoperiș:\nNume: ${form.name}\nTelefon: ${form.phone}\nLocalitate: ${form.location}\nServiciu: ${form.service}\nMesaj: ${form.message}`;
     window.open(`https://wa.me/40773082734?text=${encodeURIComponent(msg)}`, '_blank');
+    setSubmitted(true);
   };
 
   if (submitted) {
@@ -194,15 +186,10 @@ export default function QuoteFormSection() {
               </div>
               <button
                 type="submit"
-                disabled={loading}
-                className="w-full sm:w-auto px-10 py-4 bg-primary text-primary-foreground font-semibold rounded-sm text-base tracking-wide uppercase transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.02] disabled:opacity-70 flex items-center justify-center gap-3"
+                className="w-full sm:w-auto px-10 py-4 bg-primary text-primary-foreground font-semibold rounded-sm text-base tracking-wide uppercase transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.02] flex items-center justify-center gap-3"
               >
-                {loading ? (
-                  <Loader2 className="w-5 h-5 animate-spin" />
-                ) : (
-                  <Send className="w-5 h-5" />
-                )}
-                {loading ? 'Se trimite...' : 'Solicită Ofertă'}
+                <Send className="w-5 h-5" />
+                Solicită Ofertă
               </button>
             </form>
           </motion.div>
