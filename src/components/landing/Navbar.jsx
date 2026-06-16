@@ -103,11 +103,11 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center flex-1 justify-end">
             {/* Phone number */}
             <a
-              href="tel:+40786188957"
+              href="tel:+40773082734"
               className="flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-wide mr-6"
             >
               <Phone className="w-4 h-4" />
-              <span>0786 188 957</span>
+              <span>+40 773 082 734</span>
             </a>
             {/* Parallelogram nav bar — clips right to page edge */}
             <div
