@@ -89,7 +89,7 @@ export default function FooterSection() {
       <div className="border-t border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-xs">
-            © {new Date().getFullYear()} Montaj Perfect Acoperis. Toate drepturile rezervate.
+            © {new Date().getFullYear()} Acoperis Home. Toate drepturile rezervate.
           </p>
           <p className="text-muted-foreground text-xs">
             Calitate · Garanție · Profesionalism
