@@ -41,6 +41,14 @@ export default function QuoteFormSection() {
     }
     const msg = `Cerere Ofertă Acoperiș:\nNume: ${form.name}\nTelefon: ${form.phone}\nLocalitate: ${form.location}\nServiciu: ${form.service}\nMesaj: ${form.message}`;
     window.open(`https://wa.me/40773082734?text=${encodeURIComponent(msg)}`, '_blank');
+
+    // Google Ads conversion tracking
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-18244804842/YDA4CM_r_swcEOrB5vtD'
+      });
+    }
+
     setSubmitted(true);
   };
 
