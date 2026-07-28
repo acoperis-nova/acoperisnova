@@ -31,7 +31,7 @@ const testimonials = [
 
 const videoTestimonials = [
   'https://player.cloudinary.com/embed/?cloud_name=dgnlmvzgk&public_id=WhatsApp_Video_2026-04-14_at_18.15.13_1_v3tvxl',
-  'https://player.cloudinary.com/embed/?cloud_name=dgnlmvzgk&public_id=WhatsApp_Video_2026-04-14_at_18.15.13_unmd3c',
+  'https://player.cloudinary.com/embed/?cloud_name=rg1fco1g&public_id=WhatsApp_Video_2026-07-28_at_07.37.56_sdoyge',
   'https://player.cloudinary.com/embed/?cloud_name=dgnlmvzgk&public_id=WhatsApp_Video_2026-04-14_at_18.15.12_ita8mr',
 ];
 
